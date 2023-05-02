@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPatternStrategy\Impostos;
+namespace DesignPattern\Impostos;
 
-use DesignPatternStrategy\Orcamento;
+use DesignPattern\Orcamento;
 
 interface ImpostoInterface
 {

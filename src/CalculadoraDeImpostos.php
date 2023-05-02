@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPatternStrategy;
+namespace DesignPattern;
 
-use DesignPatternStrategy\Impostos\ImpostoInterface;
+use DesignPattern\Impostos\ImpostoInterface;
 
 class CalculadoraDeImpostos
 {
