@@ -10,7 +10,6 @@ use DesignPattern\Orcamento;
 
 require_once "vendor/autoload.php";
 
-
 $calculadora = new CalculadoraDeImpostos();
 
 $orcamento = new Orcamento();
