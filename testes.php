@@ -16,6 +16,8 @@ $calculadora = new CalculadoraDeImpostos();
 $orcamento = new Orcamento();
 $orcamento->quantidadeItens = 5;
 $orcamento->valor = 600;
+$orcamento->aprovar();
+$orcamento->aplicarDescontoExtra();
 
 echo "Imposto a Pagar\n";
 echo "ICMS: " . $calculadora->calcular($orcamento, new ICMS());
