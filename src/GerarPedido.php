@@ -2,7 +2,7 @@
 
 namespace DesignPattern;
 
-class GerarPedido implements ComandoInterface
+class GerarPedido
 {
     private float $valorOrcamento;
     private int $numeroItens;
@@ -15,17 +15,18 @@ class GerarPedido implements ComandoInterface
         $this->nomeCliente = $nomeCliente;
     }
 
-    public function executar(): bool
+    public function pegarValorOrcamento(): float
     {
-        $orcamento = new Orcamento();
-        $orcamento->quantidadeItens = $this->numeroItens;
-        $orcamento->valor = $this->valorOrcamento;
+        return $this->valorOrcamento;
+    }
 
-        $pedido = new Pedido();
-        $pedido->dataFinalizacao = new \DateTimeImmutable();
-        $pedido->nomeCliente = $this->nomeCliente;
-        $pedido->orcamento = $orcamento;
+    public function pegarNumeroItens(): int
+    {
+        return $this->numeroItens;
+    }
 
-        return true;
+    public function pegarNomeCliente(): string
+    {
+        return $this->nomeCliente;
     }
 }
