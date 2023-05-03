@@ -2,11 +2,23 @@
 
 namespace DesignPattern;
 
+use DesignPattern\AcoesAoGerarPedido\AcaoAposGerarPedidoInterface;
+use DesignPattern\AcoesAoGerarPedido\CriarPedidoNoBanco;
+use DesignPattern\AcoesAoGerarPedido\EnviarPedidoPorEmail;
+use DesignPattern\AcoesAoGerarPedido\LogGerarPedido;
+
 class GerarPedidoHandler
 {
+    /** @var AcaoAposGerarPedidoInterface[] */
+    private array $acoesAposGerarPedido = [];
+
     public function __construct(/* PedidoRepository, MailService */)
     {
-        
+    }
+
+    public function adicionarAcaoAoGerarPedido(AcaoAposGerarPedidoInterface $acao): void
+    {
+        $this->acoesAposGerarPedido[] = $acao;
     }
 
     public function executar(GerarPedido $gerarPedido)
@@ -20,12 +32,9 @@ class GerarPedidoHandler
         $pedido->nomeCliente = $gerarPedido->pegarNomeCliente();
         $pedido->orcamento = $orcamento;
 
-        //Executa PedidoRepository
-        echo "Salvo no banco de dados com sucesso!" . PHP_EOL;
-        //Executa MailService
-        echo "E-mail enviado com sucesso!" . PHP_EOL;
-        //Executa LogRepository
-        echo "Log salvo com sucesso!" . PHP_EOL;
+        foreach($this->acoesAposGerarPedido as $acao) {
+            $acao->executaAcao($pedido);
+        }
 
         return true;
     }
