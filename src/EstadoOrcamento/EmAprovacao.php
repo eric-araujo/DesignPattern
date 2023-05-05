@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\EstadoOrcamento;
+namespace DesignPatternComportamental\EstadoOrcamento;
 
-use DesignPattern\Orcamento;
+use DesignPatternComportamental\Orcamento;
 
 class EmAprovacao extends EstadoOrcamento
 {

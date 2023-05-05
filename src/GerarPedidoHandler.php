@@ -1,11 +1,11 @@
 <?php
 
-namespace DesignPattern;
+namespace DesignPatternComportamental;
 
-use DesignPattern\AcoesAoGerarPedido\AcaoAposGerarPedidoInterface;
-use DesignPattern\AcoesAoGerarPedido\CriarPedidoNoBanco;
-use DesignPattern\AcoesAoGerarPedido\EnviarPedidoPorEmail;
-use DesignPattern\AcoesAoGerarPedido\LogGerarPedido;
+use DesignPatternComportamental\AcoesAoGerarPedido\AcaoAposGerarPedidoInterface;
+use DesignPatternComportamental\AcoesAoGerarPedido\CriarPedidoNoBanco;
+use DesignPatternComportamental\AcoesAoGerarPedido\EnviarPedidoPorEmail;
+use DesignPatternComportamental\AcoesAoGerarPedido\LogGerarPedido;
 
 class GerarPedidoHandler
 {

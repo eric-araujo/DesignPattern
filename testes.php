@@ -1,12 +1,12 @@
 <?php
 
-use DesignPattern\CalculadoraDeDescontos;
-use DesignPattern\CalculadoraDeImpostos;
-use DesignPattern\Impostos\ICMS;
-use DesignPattern\Impostos\ICPP;
-use DesignPattern\Impostos\IKCV;
-use DesignPattern\Impostos\ISS;
-use DesignPattern\Orcamento;
+use DesignPatternComportamental\CalculadoraDeDescontos;
+use DesignPatternComportamental\CalculadoraDeImpostos;
+use DesignPatternComportamental\Impostos\ICMS;
+use DesignPatternComportamental\Impostos\ICPP;
+use DesignPatternComportamental\Impostos\IKCV;
+use DesignPatternComportamental\Impostos\ISS;
+use DesignPatternComportamental\Orcamento;
 
 require_once "vendor/autoload.php";
 
@@ -18,21 +18,23 @@ $orcamento->valor = 600;
 $orcamento->aprovar();
 $orcamento->aplicarDescontoExtra();
 
-echo "Imposto a Pagar\n";
+echo "Imposto a Pagar" . PHP_EOL;
 echo "ICMS: " . $calculadora->calcular($orcamento, new ICMS());
-echo "\n";
+echo PHP_EOL;
 echo "ISS: " . $calculadora->calcular($orcamento, new ISS());
-echo "\n";
+echo PHP_EOL;
 echo "ICPP: " . $calculadora->calcular($orcamento, new ICPP());
-echo "\n";
+echo PHP_EOL;
 echo "IKCV: " . $calculadora->calcular($orcamento, new IKCV());
 
-/**
-* $calculadoraDeconto = new CalculadoraDeDescontos();
-* 
-* $orcamento = new Orcamento();
-* $orcamento->valor = 600;
-* $orcamento->quantidadeItens = 7;
-* 
-* echo $calculadoraDeconto->calcularDescontos($orcamento);
-*/
+echo PHP_EOL;
+
+echo "========= Calculadora de Desconstos =========" . PHP_EOL;
+
+$calculadoraDeconto = new CalculadoraDeDescontos();
+
+$orcamento = new Orcamento();
+$orcamento->valor = 600;
+$orcamento->quantidadeItens = 7;
+
+echo $calculadoraDeconto->calcularDescontos($orcamento);

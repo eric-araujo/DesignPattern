@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\Impostos;
+namespace DesignPatternComportamental\Impostos;
 
-use DesignPattern\Orcamento;
+use DesignPatternComportamental\Orcamento;
 
 abstract class ImpostoComDuasAliquotas implements ImpostoInterface
 {

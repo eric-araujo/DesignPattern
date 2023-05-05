@@ -1,10 +1,10 @@
 <?php
 
-namespace DesignPattern;
+namespace DesignPatternComportamental;
 
-use DesignPattern\Descontos\DescontoMaisDe500Reais;
-use DesignPattern\Descontos\DescontoMaisDeCincoItens;
-use DesignPattern\Descontos\SemDesconto;
+use DesignPatternComportamental\Descontos\DescontoMaisDe500Reais;
+use DesignPatternComportamental\Descontos\DescontoMaisDeCincoItens;
+use DesignPatternComportamental\Descontos\SemDesconto;
 
 class CalculadoraDeDescontos
 {

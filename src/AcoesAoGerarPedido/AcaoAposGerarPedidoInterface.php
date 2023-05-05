@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPattern\AcoesAoGerarPedido;
+namespace DesignPatternComportamental\AcoesAoGerarPedido;
 
-use DesignPattern\Pedido;
+use DesignPatternComportamental\Pedido;
 
 interface AcaoAposGerarPedidoInterface
 {

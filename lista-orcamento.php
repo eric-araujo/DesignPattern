@@ -1,7 +1,7 @@
 <?php
 
-use DesignPattern\ListaDeOrcamentos;
-use DesignPattern\Orcamento;
+use DesignPatternComportamental\ListaDeOrcamentos;
+use DesignPatternComportamental\Orcamento;
 
 require_once "vendor/autoload.php";
 

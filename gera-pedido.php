@@ -2,8 +2,13 @@
 
 require_once "vendor/autoload.php";
 
-use DesignPattern\{GerarPedido, GerarPedidoHandler};
-use DesignPattern\AcoesAoGerarPedido\{CriarPedidoNoBanco, EnviarPedidoPorEmail, LogGerarPedido};
+use DesignPatternComportamental\{GerarPedido, GerarPedidoHandler};
+use DesignPatternComportamental\AcoesAoGerarPedido\{CriarPedidoNoBanco, EnviarPedidoPorEmail, LogGerarPedido};
+
+if(empty($argv[1]) || empty($argv[2]) || empty($argv[3])) {
+    echo "Faltam argumentos a serem informados!" . PHP_EOL;
+    die;
+}
 
 $valorOrcamento = $argv[1];
 $numeroDeItens = $argv[2];
