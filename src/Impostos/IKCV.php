@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPatternComportamental\Impostos;
+namespace DesignPattern\Impostos;
 
-use DesignPatternComportamental\Orcamento;
+use DesignPattern\Orcamento;
 
 class IKCV extends ImpostoComDuasAliquotas
 {

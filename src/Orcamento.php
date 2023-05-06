@@ -1,9 +1,9 @@
 <?php
 
-namespace DesignPatternComportamental;
+namespace DesignPattern;
 
-use DesignPatternComportamental\EstadoOrcamento\EmAprovacao;
-use DesignPatternComportamental\EstadoOrcamento\EstadoOrcamento;
+use DesignPattern\EstadoOrcamento\EmAprovacao;
+use DesignPattern\EstadoOrcamento\EstadoOrcamento;
 use DomainException;
 
 class Orcamento

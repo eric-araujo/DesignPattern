@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPatternComportamental\EstadoOrcamento;
+namespace DesignPattern\EstadoOrcamento;
 
-use DesignPatternComportamental\Orcamento;
+use DesignPattern\Orcamento;
 use DomainException;
 
 class Reprovado extends EstadoOrcamento

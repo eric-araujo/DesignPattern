@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPatternComportamental;
+namespace DesignPattern;
 
 class GerarPedido
 {

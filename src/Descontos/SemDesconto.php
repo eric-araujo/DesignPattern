@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPatternComportamental\Descontos;
+namespace DesignPattern\Descontos;
 
-use DesignPatternComportamental\Orcamento;
+use DesignPattern\Orcamento;
 
 class SemDesconto extends Desconto
 {

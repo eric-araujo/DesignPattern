@@ -1,8 +1,8 @@
 <?php
 
-namespace DesignPatternComportamental;
+namespace DesignPattern;
 
-use DesignPatternComportamental\EstadoOrcamento\Finalizado;
+use DesignPattern\EstadoOrcamento\Finalizado;
 use Traversable;
 
 class ListaDeOrcamentos implements \IteratorAggregate
