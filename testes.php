@@ -1,6 +1,5 @@
 <?php
 
-use DesignPattern\CalculadoraDeDescontos;
 use DesignPattern\CalculadoraDeImpostos;
 use DesignPattern\Impostos\ICMS;
 use DesignPattern\Impostos\ICPP;
