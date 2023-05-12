@@ -2,12 +2,12 @@
 
 namespace DesignPattern;
 
-use DesignPattern\Impostos\ImpostoInterface;
+use DesignPattern\Impostos\Imposto;
 
 class CalculadoraDeImpostos
 {
-    public function calcular(Orcamento $orcamento, ImpostoInterface $impostoInterface): float
+    public function calcular(Orcamento $orcamento, Imposto $imposto): float
     {
-        return $impostoInterface->calcularImposto($orcamento);
+        return $imposto->calcularImposto($orcamento);
     }
 }

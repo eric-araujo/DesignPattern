@@ -18,7 +18,16 @@ $orcamento->aprovar();
 $orcamento->aplicarDescontoExtra();
 
 echo "Imposto a Pagar\n";
-echo "ICMS: " . $calculadora->calcular($orcamento, new ICMS());
+echo "ICMS: " . $calculadora->calcular(
+    $orcamento,
+    new ICMS(
+        new ISS(
+            new ICPP(
+                new IKCV()
+            )
+        )
+    )
+);
 echo "\n";
 echo "ISS: " . $calculadora->calcular($orcamento, new ISS());
 echo "\n";
@@ -27,11 +36,11 @@ echo "\n";
 echo "IKCV: " . $calculadora->calcular($orcamento, new IKCV());
 
 /**
-* $calculadoraDeconto = new CalculadoraDeDescontos();
-* 
-* $orcamento = new Orcamento();
-* $orcamento->valor = 600;
-* $orcamento->quantidadeItens = 7;
-* 
-* echo $calculadoraDeconto->calcularDescontos($orcamento);
-*/
+ * $calculadoraDeconto = new CalculadoraDeDescontos();
+ * 
+ * $orcamento = new Orcamento();
+ * $orcamento->valor = 600;
+ * $orcamento->quantidadeItens = 7;
+ * 
+ * echo $calculadoraDeconto->calcularDescontos($orcamento);
+ */
