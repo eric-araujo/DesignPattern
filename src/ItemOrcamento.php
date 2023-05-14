@@ -13,6 +13,7 @@ class ItemOrcamento implements OrcavelInterface
 
     public function retornarValor(): float
     {
+        sleep(1);
         return $this->valor;
     }
 }
