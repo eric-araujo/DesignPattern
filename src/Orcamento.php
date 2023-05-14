@@ -4,17 +4,16 @@ namespace DesignPattern;
 
 use DesignPattern\EstadoOrcamento\EmAprovacao;
 use DesignPattern\EstadoOrcamento\EstadoOrcamento;
-use DomainException;
 
-class Orcamento
+class Orcamento implements OrcavelInterface
 {
-    public int $quantidadeItens;
-    public float $valor;
+    private array $itens;
     public EstadoOrcamento $estadoOrcamento;
 
     public function __construct()
     {
         $this->estadoOrcamento = new EmAprovacao();
+        $this->itens = [];
     }
 
     public function aplicarDescontoExtra(): void
@@ -35,5 +34,19 @@ class Orcamento
     public function finalizar(): void
     {
         $this->estadoOrcamento->finalizar($this);
+    }
+
+    public function adicionarItem(OrcavelInterface $item): void
+    {
+        $this->itens[] = $item;
+    }
+
+    public function retornarValor(): float
+    {
+        return array_reduce(
+            $this->itens,
+            fn (float $valorAcumulado, OrcavelInterface $itemOrcamento) => $itemOrcamento->retornarValor() + $valorAcumulado,
+            0
+        );
     }
 }
