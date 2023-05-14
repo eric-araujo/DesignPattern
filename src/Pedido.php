@@ -2,11 +2,8 @@
 
 namespace DesignPattern;
 
-use DateTimeImmutable;
-
 class Pedido
 {
-    public string $nomeCliente;
-    public DateTimeImmutable $dataFinalizacao;
+    public DadosExtrinsecosPedidos $dados;
     public Orcamento $orcamento;
 }
