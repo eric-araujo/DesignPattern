@@ -18,7 +18,7 @@ class Orcamento implements OrcavelInterface
 
     public function aplicarDescontoExtra(): void
     {
-        $this->valor -= $this->estadoOrcamento->calcularDescontoExtra($this);
+        // $this->valor -= $this->estadoOrcamento->calcularDescontoExtra($this);
     }
 
     public function aprovar(): void
