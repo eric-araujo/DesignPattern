@@ -1,10 +1,10 @@
 <?php
 
-namespace DesignPattern;
+namespace DesignPattern\Pedido;
 
 use DateTimeImmutable;
 
-class DadosExtrinsecosPedidos
+class TemplatePedido
 {
     private string $nomeCliente;
     private DateTimeImmutable $dataFinalizacao;
