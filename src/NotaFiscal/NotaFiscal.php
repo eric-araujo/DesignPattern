@@ -19,4 +19,9 @@ class NotaFiscal
             return $valorAcumulado + $itemAtual->retornarValor();
         }, 0);
     }
+
+    public function __clone()
+    {
+        $this->dataEmissao = new \DateTimeImmutable();
+    }
 }
